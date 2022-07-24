@@ -13,7 +13,7 @@ const Container = styled.div`
   background: none;
   background-color: hsl(225, 100%, 98%);
   border-radius: 18px;
-  padding: 32px;
+  padding: 24px;
   display: flex;
   gap: 28px;
   align-items: center;
