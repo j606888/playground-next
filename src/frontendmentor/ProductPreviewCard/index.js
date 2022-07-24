@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Card from './Card'
+import Content from './Content'
 import styled from '@emotion/styled'
 
 const Container = styled.div`
-  width: 560px;
+  box-sizing: border-box;
+  width: 640px;
   display: flex;
   background: #fff;
   border-radius: 12px;
@@ -14,7 +15,7 @@ const Container = styled.div`
     flex: 1;
   }
 
-  & img {
+  .photo {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -25,7 +26,7 @@ const Container = styled.div`
     width: 100%;
     margin: 20px;
 
-    & img {
+    .photo {
       height: 280px;
     }
   }
@@ -35,10 +36,10 @@ const ProductPreviewCard = () => {
   return (
     <Container>
       <div>
-        <img src="/product.jpg" alt="product" />
+        <img src="/product.jpg" alt="product" className='photo'/>
       </div>
       <div>
-        <Card />
+        <Content />
       </div>
     </Container>
   )

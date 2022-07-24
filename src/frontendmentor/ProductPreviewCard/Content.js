@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const greyColor = "hsl(228, 12%, 48%)"
 const greenColor = "hsl(158, 36%, 37%)"
-const CardContainer = styled.div`
+const ContentContainer = styled.div`
   * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 32px;
+  padding: 48px;
 
   h5 {
     letter-spacing: 3px;
@@ -49,7 +49,7 @@ const Button = styled.button`
   justify-content: center;
   border: none;
   border-radius: 8px;
-  padding: 12px 0;
+  padding: 16px 0;
   gap: 12px;
   cursor: pointer;
 
@@ -66,12 +66,14 @@ const Pricing = styled.div`
   .current-price {
     color: ${greenColor};
     font-family: "Fraunces", serif;
-    font-size: 36px;
+    font-size: 32px;
     margin-right: 20px;
   }
+
   .original-price {
     color: hsl(228, 12%, 48%);
     text-decoration: line-through;
+    font-size: 12px;
   }
 `
 
@@ -79,7 +81,7 @@ const Card = () => {
   return (
     <>
       <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
-      <CardContainer>
+      <ContentContainer>
         <h5>PERFUME</h5>
         <h2>Gabrielle Essence Eau De Parfum</h2>
         <p>
@@ -91,10 +93,10 @@ const Card = () => {
           <span className="original-price">$169.99</span>
         </Pricing>
         <Button>
-          <Image src="/icon-cart.svg" alt="icon-card" width={16} height={16} />
+          <img src="/icon-cart.svg" alt="icon-card" />
           Add to Cart
         </Button>
-      </CardContainer>
+      </ContentContainer>
     </>
   )
 }
