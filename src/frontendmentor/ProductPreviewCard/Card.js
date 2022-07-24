@@ -32,6 +32,10 @@ const CardContainer = styled.div`
     line-height: 160%;
     font-size: 14px;
   }
+
+  @media only screen and (max-width: 640px) {
+    padding: 16px;
+  }
 `
 
 const Button = styled.button`

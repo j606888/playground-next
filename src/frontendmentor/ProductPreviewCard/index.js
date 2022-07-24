@@ -19,6 +19,16 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px;
+
+    & img {
+      height: 280px;
+    }
+  }
 `
 
 const ProductPreviewCard = () => {
