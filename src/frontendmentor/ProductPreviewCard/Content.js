@@ -1,6 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import React from 'react'
 import styled from 'styled-components'
 
 const greyColor = "hsl(228, 12%, 48%)"
@@ -81,6 +78,7 @@ const Card = () => {
   return (
     <>
       <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+      
       <ContentContainer>
         <h5>PERFUME</h5>
         <h2>Gabrielle Essence Eau De Parfum</h2>
