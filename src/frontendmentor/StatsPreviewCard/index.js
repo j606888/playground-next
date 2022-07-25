@@ -25,12 +25,27 @@ const Container = styled.div`
       height: 100%;
     }
   }
+
+  @media only screen and (max-width: 960px) {
+    flex-direction: column;
+    width: 320px;
+    text-align: center;
+
+    .image {
+      order: -1;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 `
 
 const Content = styled.div`
   background-color: hsl(244, 38%, 16%);
   padding: 4rem;
-  
+
   h1 {
     color: #fff;
     font-size: 36px;
@@ -51,6 +66,24 @@ const Content = styled.div`
   .summary-list {
     display: flex;
     gap: 64px;
+  }
+
+  @media only screen and (max-width: 960px) {
+    padding: 2rem;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 3rem;
+    }
+
+    .summary-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
   }
 `
 
