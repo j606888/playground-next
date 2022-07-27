@@ -2,16 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from './Card'
 
-
-// const CoolDiv = styled.div`
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// `
-
 const Container = styled.div`
-  display: flex;
-  width: auto;
+  display: inline-flex;
   border-radius: 16px;
   overflow: hidden;
 `
@@ -38,13 +30,11 @@ const Information = [
 ]
 const ThreeCard = () => {
   return (
-    // <CoolDiv>
-      <Container>
-        {Information.map((info) => (
-          <Card key={info.brand} {...info} />
-        ))}
-      </Container>
-    // </CoolDiv>
+    <Container>
+      {Information.map((info) => (
+        <Card key={info.brand} {...info} />
+      ))}
+    </Container>
   )
 }
 
