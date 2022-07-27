@@ -3,8 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  box-sizing: border-box;
   background-color: ${(props) => props.bgColor};
-  width: 200px;
+  min-width: 200px;
+  max-width: 320px;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -25,6 +27,21 @@ const Container = styled.div`
     color: hsla(0, 0%, 100%, 0.75);
     margin-bottom: 5rem;
     min-height: 10rem;
+  }
+
+  @media only screen and (max-width: 960px) {
+    max-width: 360px;
+    min-width: 280px;
+    padding: 2rem;
+    
+    h2 {
+      margin: 2rem 0;
+    }
+
+    p {
+      min-height: 0;
+      margin: 0 0 2rem 0;
+    }
   }
 `
 const Button = styled.button`

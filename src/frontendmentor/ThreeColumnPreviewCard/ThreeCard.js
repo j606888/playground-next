@@ -6,6 +6,11 @@ const Container = styled.div`
   display: inline-flex;
   border-radius: 16px;
   overflow: hidden;
+
+  @media only screen and (max-width: 960px) {
+    // display: flex;
+    flex-direction: column;
+  }
 `
 
 const Information = [
