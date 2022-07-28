@@ -11,7 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Decafamily=Big+Shoulders+Display:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Decafamily=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
