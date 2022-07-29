@@ -68,7 +68,7 @@ const PaymentButton = styled.button`
   }
 `
 
-const Order = () => {
+const OrderSummary = () => {
   return (
     <>
       <link
@@ -93,4 +93,4 @@ const Order = () => {
   )
 }
 
-export default Order
+export default OrderSummary

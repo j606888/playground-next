@@ -1,8 +1,7 @@
-import ThreeCard from "./ThreeCard"
+import ThreeCard from "../src/frontendmentor/ThreeCard"
 
 export default {
-  name: "ThreeCard",
-  component: ThreeCard,
+  title: "frontendmentor/ThreeCard",
 }
 
 export const Default = (args) => <ThreeCard {...args} />

@@ -87,7 +87,7 @@ const Content = styled.div`
   }
 `
 
-const Card = () => {
+const StatsPreviewCard = () => {
   return (
     <Container>
       <Content>
@@ -112,4 +112,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default StatsPreviewCard
