@@ -9,6 +9,7 @@ const Container = styled.div`
   background-color: white;
   padding: 2rem;
   margin: 2rem;
+  margin-top: 6rem;
   border-radius: 24px;
 
   & > img {
