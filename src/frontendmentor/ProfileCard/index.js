@@ -4,24 +4,24 @@ import styled from 'styled-components'
 import Detail from './Detail'
 
 const Container = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  background: white;
-  text-align: center;
-  border-radius: 24px;
-  overflow: hidden;
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
+  display: inline-flex;
+  flex-direction: column;
+  background: white;
+  text-align: center;
+  border-radius: 24px;
+  overflow: hidden;
   font-family: "Kumbh Sans", sans-serif;
 `
 
 const TopPart = styled.img`
-  background-image: url(${"/bg-pattern-card.svg"});
-  height: 124px;
+  background-image: url(${"/profile-card/bg-pattern-card.svg"});
+  height: 12rem;
   width: 100%;
   display: block;
 `
@@ -29,17 +29,21 @@ const TopPart = styled.img`
 const MiddlePart = styled.div`
   border-bottom: 1px solid hsl(227, 10%, 46%);
   padding: 2rem;
+  position: relative;
 
   img {
+    position: absolute;
     border-radius: 50%;
     width: 128px;
     height: 128px;
     border: 6px solid white;
+    top: -64px;
+    left: 172px;
   }
 
   h3 {
     font-size: 24px;
-    margin: 1rem 0 0.5rem;
+    margin: 4rem 0 0.5rem;
 
     span {
       color: hsl(227, 10%, 46%);
@@ -75,12 +79,12 @@ const Details = [
   }
 ]
 
-const Profile = () => {
+const ProfileCard = () => {
   return (
     <Container>
       <TopPart />
       <MiddlePart>
-        <img src='/image-victor.jpg' alt="victor" />
+        <img src='/profile-card/image-victor.jpg' alt="victor" />
         <h3>Victor Crest <span>26</span></h3>
         <p>London</p>
       </MiddlePart>
@@ -93,4 +97,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileCard
