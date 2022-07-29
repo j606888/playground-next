@@ -12,26 +12,28 @@ const Container = styled.div`
   margin-top: 6rem;
   border-radius: 24px;
 
-  & > img {
-    display: block;
-    width: 200px;
-    margin: -7.7rem auto 0;
-    
+  div.image-block {
+    margin-top: -7.7rem;
+    text-align: center;
+    position: relative;
 
-    // &::after {
-    //   content: "xxx";
-    //   background-image: url('/faq-accordian-card/bg-pattern-mobile.svg');
-    //   width: 100%;
-    //   height: 100%;
-    //   position: absolute;
-    //   top: 30px;
-    //   left: 50%;
-    // }
+    & > img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    & > img:last-child {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 3.7rem;
+    }
   }
+
 
   h1 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 3rem auto;
   }
 `
 
@@ -71,9 +73,17 @@ const contents = [
 const FaqAccordionCard = () => {
   return (
     <Container>
-      <img src="/faq-accordian-card/illustration-woman-online-mobile.svg" alt="woman" />
+      <div className="image-block">
+        <img
+          src="/faq-accordian-card/illustration-woman-online-mobile.svg"
+          alt="woman"
+        />
+        <img src="/faq-accordian-card/bg-pattern-mobile.svg" alt="bg-pattern" />
+      </div>
       <h1>FAQ</h1>
-      {contents.map(content => <Accordion key={content.id} {...content} />)}
+      {contents.map((content) => (
+        <Accordion key={content.id} {...content} />
+      ))}
     </Container>
   )
 }
