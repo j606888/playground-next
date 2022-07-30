@@ -1,4 +1,4 @@
-import StatsPreviewCard from "../src/frontendmentor/StatsPreviewCard"
+import StatsPreviewCard from "../../src/frontendmentor/StatsPreviewCard"
 
 export default {
   title: "frontendmentor/StatsPreviewCard",

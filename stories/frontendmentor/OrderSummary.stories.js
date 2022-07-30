@@ -1,4 +1,4 @@
-import OrderSummary from "../src/frontendmentor/OrderSummary"
+import OrderSummary from "../../src/frontendmentor/OrderSummary"
 
 export default {
   title: "frontendmentor/OrderSummary",

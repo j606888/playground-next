@@ -1,4 +1,4 @@
-import ThreeCard from "../src/frontendmentor/ThreeCard"
+import ThreeCard from "../../src/frontendmentor/ThreeCard"
 
 export default {
   title: "frontendmentor/ThreeCard",

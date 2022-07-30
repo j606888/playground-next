@@ -1,4 +1,4 @@
-import ProductPreviewCard from "../src/frontendmentor/ProductPreviewCard"
+import ProductPreviewCard from "../../src/frontendmentor/ProductPreviewCard"
 
 export default {
   title: "frontendmentor/ProductPreviewCard",

@@ -1,5 +1,5 @@
-import ProfileCard from '../src/frontendmentor/ProfileCard'
-import Desktop from '../src/frontendmentor/ProfileCard/Desktop'
+import ProfileCard from '../../src/frontendmentor/ProfileCard'
+import Desktop from '../../src/frontendmentor/ProfileCard/Desktop'
 
 
 export default {
