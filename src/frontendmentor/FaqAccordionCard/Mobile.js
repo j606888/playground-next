@@ -4,17 +4,13 @@ import FaqAccordionCard from "."
 
 const Container = styled.div`
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  width: 420px;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
+  padding: 2rem 1px;
 `
 
 const Desktop = () => {
   return (
-    
     <Container>
       <FaqAccordionCard />
     </Container>

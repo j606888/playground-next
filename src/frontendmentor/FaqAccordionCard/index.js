@@ -12,28 +12,62 @@ const Container = styled.div`
   margin-top: 6rem;
   border-radius: 24px;
 
-  div.image-block {
-    margin-top: -7.7rem;
-    text-align: center;
-    position: relative;
-
-    & > img {
-      display: block;
-      margin: 0 auto;
-      width: 200px;
-    }
-
-    & > img:last-child {
-      position: absolute;
-      bottom: -1.5rem;
-      left: 3.7rem;
-    }
+  .desktop {
+    display: block;
   }
 
+  .mobile {
+    display: none;
+  }
+
+  div.image-block {
+    .desktop {
+      margin-top: -7.7rem;
+      text-align: center;
+      position: relative;
+
+      & > img {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+      }
+
+      & > img:last-child {
+        position: absolute;
+        bottom: -1.5rem;
+        left: 3.7rem;
+      }
+    }
+  }
 
   h1 {
     text-align: center;
     margin: 3rem auto;
+  }
+
+  @media only screen and (min-width: 960px) {
+    display: flex;
+    max-width: 840px;
+
+    .image-block {
+      width: 40%;
+    }
+    .content {
+      max-width: 50%;
+      padding: 0 3rem;
+
+      h1 {
+        text-align: left;
+      }
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
   }
 `
 
@@ -74,16 +108,33 @@ const FaqAccordionCard = () => {
   return (
     <Container>
       <div className="image-block">
-        <img
-          src="/faq-accordian-card/illustration-woman-online-mobile.svg"
-          alt="woman"
-        />
-        <img src="/faq-accordian-card/bg-pattern-mobile.svg" alt="bg-pattern" />
+        <div className="desktop">
+          <img
+            src="/faq-accordian-card/illustration-woman-online-mobile.svg"
+            alt="woman"
+          />
+          <img
+            src="/faq-accordian-card/bg-pattern-mobile.svg"
+            alt="bg-pattern"
+          />
+        </div>
+        <div className="mobile">
+          <img
+            src="/faq-accordian-card/illustration-woman-online-mobile.svg"
+            alt="woman"
+          />
+          <img
+            src="/faq-accordian-card/bg-pattern-mobile.svg"
+            alt="bg-pattern"
+          />
+        </div>
       </div>
-      <h1>FAQ</h1>
-      {contents.map((content) => (
-        <Accordion key={content.id} {...content} />
-      ))}
+      <div className="content">
+        <h1>FAQ</h1>
+        {contents.map((content) => (
+          <Accordion key={content.id} {...content} />
+        ))}
+      </div>
     </Container>
   )
 }
