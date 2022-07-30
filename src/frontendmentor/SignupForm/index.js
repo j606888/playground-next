@@ -58,6 +58,29 @@ const Content = styled.div`
       font-weight: 600;
     }
   }
+
+  @media only screen and (min-width: 960px) {
+    display: flex;
+    max-width: 1080px;
+    margin: 5rem auto;
+
+    & > div {
+      flex: 1;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+
+      h1 {
+        font-size: 48px;
+        line-height: 120%;
+      }
+
+    }
+  }
 `
 
 const Form = styled.form`
