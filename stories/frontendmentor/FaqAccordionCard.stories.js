@@ -1,7 +1,7 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport"
-import FaqAccordionCard from "../src/frontendmentor/FaqAccordionCard"
-import Desktop from "../src/frontendmentor/FaqAccordionCard/Desktop"
-import Mobile from "../src/frontendmentor/FaqAccordionCard/Mobile"
+import FaqAccordionCard from "../../src/frontendmentor/FaqAccordionCard"
+import Desktop from "../../src/frontendmentor/FaqAccordionCard/Desktop"
+import Mobile from "../../src/frontendmentor/FaqAccordionCard/Mobile"
 
 export default {
   title: "frontendmentor/FaqAccordionCard",
