@@ -1,7 +1,14 @@
 import SignupForm from "../../src/frontendmentor/SignupForm"
+import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport"
+
 
 export default {
-  name: "frontendmentor/SignupForm"
+  name: "frontendmentor/SignupForm",
+  parameters: {
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+    },
+  },
 }
 
 export const Default = (args) => <SignupForm {...args} />
