@@ -7,7 +7,7 @@ const Container = styled.div`
   margin-bottom: 1.5rem;
   overflow: hidden;
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 `
 
 const Label = styled.div`
