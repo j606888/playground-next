@@ -1,75 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 import Accordion from './Accordion'
 
-const Container = styled.div`
-  max-width: 320px;
-  font-family: "Kumbh Sans", sans-serif;
-  background-color: white;
-  padding: 2rem;
-  margin: 2rem;
-  margin-top: 6rem;
-  border-radius: 24px;
-
-  .desktop {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-
-  div.image-block {
-    .desktop {
-      margin-top: -7.7rem;
-      text-align: center;
-      position: relative;
-
-      & > img {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-      }
-
-      & > img:last-child {
-        position: absolute;
-        bottom: -1.5rem;
-        left: 3.7rem;
-      }
-    }
-  }
-
-  h1 {
-    text-align: center;
-    margin: 3rem auto;
-  }
-
-  @media only screen and (min-width: 960px) {
-    display: flex;
-    max-width: 840px;
-
-    .image-block {
-      width: 40%;
-    }
-    .content {
-      max-width: 50%;
-      padding: 0 3rem;
-
-      h1 {
-        text-align: left;
-      }
-    }
-
-    .desktop {
-      display: none;
-    }
-
-    .mobile {
-      display: block;
-    }
-  }
-`
 
 const contents = [
   {
@@ -104,37 +37,91 @@ const contents = [
   },
 ]
 
+const bob = keyframes`
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translateY(-0.3rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+`
+
+const Container = styled.div`
+  position: relative;
+
+  .float-box {
+    position: absolute;
+    width: 5rem;
+    height: auto;
+    left: 4rem;
+    top: -2rem;
+    animation: ${bob} 2s infinite;
+
+  }
+`
+
+const CardContainer = styled.div`
+  max-width: 320px;
+  font-family: "Kumbh Sans", sans-serif;
+  background: url(/faq-accordian-card/bg-pattern-mobile.svg), white;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top: 6rem;
+  border-radius: 24px;
+
+  h1 {
+    text-align: center;
+    margin: 3rem auto;
+  }
+
+  .women-img {
+    width: 15rem;
+    height: auto;
+    margin-top: -8.8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: 960px) {
+    display: flex;
+    max-width: 840px;
+
+    .content {
+      max-width: 50%;
+      padding: 0 3rem;
+
+      h1 {
+        text-align: left;
+      }
+    }
+  }
+`
+
 const FaqAccordionCard = () => {
   return (
     <Container>
-      <div className="image-block">
-        <div className="desktop">
-          <img
-            src="/faq-accordian-card/illustration-woman-online-mobile.svg"
-            alt="woman"
-          />
-          <img
-            src="/faq-accordian-card/bg-pattern-mobile.svg"
-            alt="bg-pattern"
-          />
+      <img src="/faq-accordian-card/illustration-box-desktop.svg" alt="float-box" className='float-box' />
+      <CardContainer>
+        <img
+          src="/faq-accordian-card/illustration-woman-online-desktop.svg"
+          alt="woman"
+          className='women-img'
+        />
+        <div className="content">
+          <h1>FAQ</h1>
+          {contents.map((content) => (
+            <Accordion key={content.id} {...content} />
+          ))}
         </div>
-        <div className="mobile">
-          <img
-            src="/faq-accordian-card/illustration-woman-online-mobile.svg"
-            alt="woman"
-          />
-          <img
-            src="/faq-accordian-card/bg-pattern-mobile.svg"
-            alt="bg-pattern"
-          />
-        </div>
-      </div>
-      <div className="content">
-        <h1>FAQ</h1>
-        {contents.map((content) => (
-          <Accordion key={content.id} {...content} />
-        ))}
-      </div>
+      </CardContainer>
     </Container>
   )
 }
