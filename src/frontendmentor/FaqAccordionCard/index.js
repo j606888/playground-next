@@ -61,7 +61,14 @@ const Container = styled.div`
     left: 4rem;
     top: -2rem;
     animation: ${bob} 2s infinite;
+  }
 
+  @media only screen and (min-width: 960px) {
+    .float-box {
+      width: 11rem;
+      left: -3rem;
+      top: 20rem;
+    }
   }
 `
 
@@ -92,17 +99,27 @@ const CardContainer = styled.div`
 
   @media only screen and (min-width: 960px) {
     display: flex;
-    max-width: 840px;
+    max-width: 960px;
+    overflow: hidden;
+    background: url(/faq-accordian-card/bg-pattern-desktop.svg), white;
+    background-repeat: no-repeat;
+    background-position: -32rem -17rem;
 
     .content {
-      max-width: 50%;
+      max-width: 40%;
       padding: 0 3rem;
 
       h1 {
         text-align: left;
       }
     }
-  }
+
+    .women-img {
+      margin-top: 1rem;
+      margin-left: -8rem;
+      width: auto;
+      height: 26rem;
+    }
 `
 
 const FaqAccordionCard = () => {
