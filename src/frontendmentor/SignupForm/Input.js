@@ -9,8 +9,8 @@ const Container = styled.div`
 const RealInput = styled.input`
   width: 100%;
   border-radius: 8px;
-  height: 3.5rem;
-  border: 1px solid #ccc;
+  height: 4rem;
+  border: 1px solid #ddd;
   transition: border-color 0.3s ease-in, border-width 0.3s ease-in;
   padding-left: 1.5rem;
   font-weight: 600;
