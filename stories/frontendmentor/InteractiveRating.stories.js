@@ -1,4 +1,4 @@
-import InteractiveRating from "../src/frontendmentor/InteractiveRating"
+import InteractiveRating from "../../src/frontendmentor/InteractiveRating"
 
 export default {
   title: "frontendmentor/InteractiveRating"
