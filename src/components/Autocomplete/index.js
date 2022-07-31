@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -37,8 +37,9 @@ const Options = styled.ul`
   background-color: white;
   margin: 0;
   padding: 8px;
+  padding: ${(props) => props.hasResults ? '8px' : 0 };
   list-style: none;
-  overflow-y: scroll;  
+  overflow-y: scroll;
   max-height: 17rem;
 
   li {
@@ -52,19 +53,49 @@ const Options = styled.ul`
   }
 `
 
+const searchList = [
+  "Apple",
+  "Ancle",
+  "Android",
+  "Banana",
+  "Car",
+  "Cafe",
+  "Cake",
+  "Circle",
+  "Orange"
+]
+
 const Autocomplete = () => {
+  const [keyword, setKeyword] = useState(null)
+  const [autoList, setAutoList] = useState([])
+  const [hasResults, setHasResults] = useState(false)
+
+  const handleChange = (event) => {
+    setKeyword(event.target.value)
+  }
+
+  useEffect(() => {
+    if (!keyword) {
+      setAutoList([])
+      setHasResults(false)
+      return
+    }
+
+    const filteredList = searchList.filter(word => {
+      return word.toLowerCase().startsWith(keyword.toLowerCase())
+    })
+
+    setAutoList(filteredList)
+    setHasResults(filteredList.length > 0)
+  }, [keyword])
+
   return (
     <Container>
-      <input placeholder="Type to search..." />
-      <Options>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Car</li>
-        <li>Dark</li>
-        <li>Earth</li>
-        <li>Earth</li>
-        <li>Earth</li>
-        <li>Earth</li>
+      <input placeholder="Type to search..." onChange={handleChange} />
+      <Options hasResults={hasResults}>
+        {autoList.map((list) => (
+          <li key={list}>{list}</li>
+        ))}
       </Options>
       <i className="fa-solid fa-magnifying-glass"></i>
     </Container>
