@@ -21,7 +21,6 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   margin: 3rem 1rem;
-  max-width: 960px;
   color: hsl(234, 12%, 34%);
   text-align: center;
 
@@ -38,7 +37,8 @@ const Container = styled.div`
 
   & > p {
     color: hsl(229, 6%, 66%);
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
+    max-width: 560px;
   }
 
   .cards {
@@ -47,6 +47,19 @@ const Container = styled.div`
     gap: 2rem;
     margin: 0 auto;
     align-items: center;
+  }
+
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .cards {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 `
 
@@ -67,20 +80,21 @@ const FourCard = () => {
             <p>Monitors activity to identify project roadblocks</p>
             <img src="/four-card/icon-supervisor.svg" alt="team-builder" />
           </Card>
-          <Card color="red">
-            <h2>Team Builder</h2>
-            <p>
-              Scans our talent network to create the optimal team for your
-              project
-            </p>
-            <img src="/four-card/icon-team-builder.svg" alt="team-builder" />
-          </Card>
-          <Card color="orange">
-            <h2>Karma</h2>
-            <p>Regularly evaluates our talent to ensure quality</p>
-            <img src="/four-card/icon-karma.svg" alt="team-builder" />
-          </Card>
-
+          <div className="card-group">
+            <Card color="red">
+              <h2>Team Builder</h2>
+              <p>
+                Scans our talent network to create the optimal team for your
+                project
+              </p>
+              <img src="/four-card/icon-team-builder.svg" alt="team-builder" />
+            </Card>
+            <Card color="orange">
+              <h2>Karma</h2>
+              <p>Regularly evaluates our talent to ensure quality</p>
+              <img src="/four-card/icon-karma.svg" alt="team-builder" />
+            </Card>
+          </div>
           <Card color="blue">
             <h2>Calculator</h2>
             <p>

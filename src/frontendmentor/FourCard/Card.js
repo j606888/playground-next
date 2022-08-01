@@ -37,7 +37,6 @@ const Container = styled.div`
   }
 `
 
-
 const Card = ({color, children}) => {
   return (
     <Container color={color}>
