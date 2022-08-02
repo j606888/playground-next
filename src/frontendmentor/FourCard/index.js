@@ -47,6 +47,11 @@ const Container = styled.div`
     gap: 2rem;
     margin: 0 auto;
     align-items: center;
+    max-width: calc((360px * 3) + 4rem);
+    
+    & > * {
+      flex: 1 1 calc((100% - 4rem) / 3);
+    }
   }
 
   .card-group {
