@@ -20,6 +20,8 @@ const Wrapper = styled.div`
 const Container = styled.div`
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   .logo {
     margin: 1rem;
@@ -69,6 +71,33 @@ const Container = styled.div`
 
     form {
       position: relative;
+    }
+  }
+
+  .hero-image-desktop {
+    display: none;
+  }
+
+  @media only screen and (min-width: 960px) {
+    flex-direction: row;
+
+    .content-wrapper {
+      padding: 3rem 6rem;
+    }
+    .content {
+      margin-top: 3rem;
+      text-align: left;
+      width: 70%;
+    }
+
+    .hero-image {
+      display: none;
+    }
+
+    .hero-image-desktop {
+      display: block;
+      height: 100%;
+      width: 44%;
     }
   }
 `
@@ -173,27 +202,32 @@ const ComingSoon = () => {
     <Wrapper>
       <ResetStyle />
       <Container>
-        <div className="logo">
-          <img src="/coming-soon/logo.svg" alt="logo" />
+        <div className='content-wrapper'>
+          <div className="logo">
+            <img src="/coming-soon/logo.svg" alt="logo" />
+          </div>
+          <div className="hero-image">
+            <img src="/coming-soon/hero-mobile.jpg" alt="hero" />
+          </div>
+          <div className="content">
+            <h1>
+              <span>We&apos;re</span> coming soon
+            </h1>
+            <p>
+              Hello fellow shoppers! We&apos;re currently building our new
+              fashion store. Add your email below to stay up-to-date with
+              announcements and our launch deals.
+            </p>
+            <form>
+              <EmailInput />
+              <Button>
+                <img src="/coming-soon/icon-arrow.svg" alt="arrow" />
+              </Button>
+            </form>
+          </div>
         </div>
-        <div className="hero-image">
-          <img src="/coming-soon/hero-mobile.jpg" alt="hero" />
-        </div>
-        <div className="content">
-          <h1>
-            <span>We&apos;re</span> coming soon
-          </h1>
-          <p>
-            Hello fellow shoppers! We&apos;re currently building our new fashion
-            store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
-          </p>
-          <form>
-            <EmailInput />
-            <Button>
-              <img src="/coming-soon/icon-arrow.svg" alt="arrow" />
-            </Button>
-          </form>
+        <div className='hero-image-desktop'>
+          <img src="/coming-soon/hero-desktop.jpg" alt="hero" />
         </div>
       </Container>
     </Wrapper>
