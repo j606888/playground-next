@@ -26,6 +26,7 @@ export default function Document() {
           referrerpolicy="no-referrer"
         />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
       </Head>
       <body>
         <Main />
