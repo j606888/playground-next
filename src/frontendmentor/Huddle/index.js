@@ -64,6 +64,20 @@ const Container = styled.div`
       box-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
   }
+
+  footer {
+    margin: 5rem auto 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    i {
+      border: 1px solid white;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      line-height: 32px;
+    }
+  }
 `
 
 const Huddle = () => {
@@ -86,9 +100,9 @@ const Huddle = () => {
           </p>
           <button>Register</button>
           <footer>
-            f
-            <img src="huddle/facebook-f-brands.svg" alt="facebook" />
-            f
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
           </footer>
         </div>
       </Container>
