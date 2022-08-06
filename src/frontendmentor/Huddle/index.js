@@ -61,7 +61,13 @@ const Container = styled.div`
       border-radius: 24px;
       border: none;
       background-color: white;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 
@@ -70,12 +76,36 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     gap: 12px;
+
     i {
       border: 1px solid white;
       height: 32px;
       width: 32px;
       border-radius: 50%;
       line-height: 32px;
+
+      &:hover {
+        color: hsl(300, 69%, 71%);
+        border-color: hsl(300, 69%, 71%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .box {
+      display: flex;
+
+      .right {
+        width: 40%;
+        padding: 3rem 0 0 2rem;
+      }
+    }
+
+    footer {
+      position: absolute;
+      right: 4rem;
+      bottom: 0;
     }
   }
 `
@@ -88,22 +118,26 @@ const Huddle = () => {
         <div className="logo">
           <img src="/huddle/logo.svg" alt="logo" />
         </div>
-        <div className="hero">
-          <img src="/huddle/illustration-mockups.svg" alt="mockup" />
-        </div>
-        <div className="content">
-          <h2>Build The Community Your Fans Will Love</h2>
-          <p>
-            Huddle re-imagines the way we build communities. You have a voice,
-            but so does your audience. Create connections with your users as you
-            engage in genuine discussion.
-          </p>
-          <button>Register</button>
-          <footer>
-            <i className="fa-brands fa-facebook-f"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-instagram"></i>
-          </footer>
+        <div className="box">
+          <div className="hero">
+            <img src="/huddle/illustration-mockups.svg" alt="mockup" />
+          </div>
+          <div className='right'>
+            <div className="content">
+              <h2>Build The Community Your Fans Will Love</h2>
+              <p>
+                Huddle re-imagines the way we build communities. You have a voice,
+                but so does your audience. Create connections with your users as you
+                engage in genuine discussion.
+              </p>
+              <button>Register</button>
+              <footer>
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+              </footer>
+            </div>
+          </div>
         </div>
       </Container>
     </Wrapper>
